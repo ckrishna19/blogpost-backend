@@ -1,0 +1,438 @@
+  {
+	"info": {
+		"_postman_id": "4141058c-33da-4a39-9df0-3749224bc778",
+		"name": "Social backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13627926"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "Register user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"  xyzQ1234@gmail.com   \",\r\n    \"password\":\"Drish1777\",\r\n    \"firstName\":\"krishna\",\r\n    \"lastName\":\"Chalise\",\r\n    \"gender\":\"hello\"\r\n\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{userBaseUrl}}/register",
+							"host": [
+								"{{userBaseUrl}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n    \"email\":\"  xyzq1234@gmail.com   \",\r\n    \"password\":\"Krishna@1777\",\r\n    \"firstName\":\"krishna\",\r\n    \"lastName\":\"Chalise\",\r\n    \"gender\":\"hello\"\r\n\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{userBaseUrl}}/login",
+							"host": [
+								"{{userBaseUrl}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update password",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"  xyzQ1234@gmail.com   \",\r\n    \"password\":\"Drish@1777\",\r\n    \"firstName\":\"krishna\",\r\n    \"lastName\":\"Chalise\",\r\n    \"gender\":\"hello\",\r\n    \"oldPassword\":\"Drish1777\",\r\n    \"newPassword\":\"Krishna@1777\"\r\n\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{userBaseUrl}}/684d9acff1945ee81c879958",
+							"host": [
+								"{{userBaseUrl}}"
+							],
+							"path": [
+								"684d9acff1945ee81c879958"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"  xyzQ1234@gmail.com   \",\r\n    \"password\":\"Drish@1777\",\r\n    \"firstName\":\"krishna\",\r\n    \"lastName\":\"Chalise\",\r\n    \"gender\":\"hello\",\r\n    \"oldPassword\":\"Drish1777\",\r\n    \"newPassword\":\"Krishna@1777\"\r\n\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{userBaseUrl}}/logout",
+							"host": [
+								"{{userBaseUrl}}"
+							],
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "post",
+			"item": [
+				{
+					"name": "create post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "text",
+									"value": "my new post",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "postman-cloud:///1f04949a-65dc-49d0-8e32-a7a4da21f5d6"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{postBaseUrl}}/new",
+							"host": [
+								"{{postBaseUrl}}"
+							],
+							"path": [
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Post",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "text",
+									"value": "my new post",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/dell/OneDrive/Pictures/Screenshots/Screenshot 2025-05-16 165817.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{postBaseUrl}}/684dd3cd492c294e6b2d5fcd",
+							"host": [
+								"{{postBaseUrl}}"
+							],
+							"path": [
+								"684dd3cd492c294e6b2d5fcd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete post",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "text",
+									"value": "my new post",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/dell/OneDrive/Pictures/Screenshots/Screenshot 2025-05-16 165817.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{postBaseUrl}}/684de620ed27cdb863aa1028",
+							"host": [
+								"{{postBaseUrl}}"
+							],
+							"path": [
+								"684de620ed27cdb863aa1028"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get single post",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "text",
+									"value": "my new post",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/dell/OneDrive/Pictures/Screenshots/Screenshot 2025-05-16 165817.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{postBaseUrl}}/684de9b3d07c80edc25fceaa",
+							"host": [
+								"{{postBaseUrl}}"
+							],
+							"path": [
+								"684de9b3d07c80edc25fceaa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all post by single user",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "text",
+									"value": "my new post",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/dell/OneDrive/Pictures/Screenshots/Screenshot 2025-05-16 165817.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{postBaseUrl}}/684d9acff1945ee81c879958/allpost",
+							"host": [
+								"{{postBaseUrl}}"
+							],
+							"path": [
+								"684d9acff1945ee81c879958",
+								"allpost"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All post",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "text",
+									"value": "my new post",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/dell/OneDrive/Pictures/Screenshots/Screenshot 2025-05-16 165817.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{postBaseUrl}}/allpost",
+							"host": [
+								"{{postBaseUrl}}"
+							],
+							"path": [
+								"allpost"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "comment",
+			"item": [
+				{
+					"name": "write comment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"postId\":\"684f101283bfb820a4afcea9\",\r\n    \"text\":\"hello comment on post..\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{commentBaseUrl}}/new",
+							"host": [
+								"{{commentBaseUrl}}"
+							],
+							"path": [
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update comment",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"text\":\"updating comment.... now\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{commentBaseUrl}}/684f04c86cc25b91e0c6f7ce",
+							"host": [
+								"{{commentBaseUrl}}"
+							],
+							"path": [
+								"684f04c86cc25b91e0c6f7ce"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete comment",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"text\":\"updating comment.... now\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{commentBaseUrl}}/684f0cb39db4e93ee22760ff",
+							"host": [
+								"{{commentBaseUrl}}"
+							],
+							"path": [
+								"684f0cb39db4e93ee22760ff"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All comment",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"postId\":\"684f101283bfb820a4afcea9\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{commentBaseUrl}}/all-comment",
+							"host": [
+								"{{commentBaseUrl}}"
+							],
+							"path": [
+								"all-comment"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
