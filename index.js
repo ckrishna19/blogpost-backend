@@ -32,7 +32,9 @@ cloudinary.config({
   cloud_name: process.env.CLOUDINARY_CLIENT_ID,
 });
 const port = process.env.PORT || 5002;
-
+app.get("/", (req, res) => {
+  res.send("hello");
+});
 app.use("/api/user", userRouter);
 app.use(authUser);
 app.use("/api/post", postRoute);
