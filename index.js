@@ -20,7 +20,7 @@ connectSocket(server);
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://blogpost-frontend-coral.vercel.app",
     credentials: true,
   })
 );

@@ -31,7 +31,6 @@ export const registerUser = asyncHandler(async (req, res) => {
   return res
     .status(201)
     .cookie("token", `Bearer ${token}`, {
-      maxAge: 60 * 60 * 1000,
       httpOnly: true,
       secure: true,
     })
@@ -58,7 +57,6 @@ export const loginUser = asyncHandler(async (req, res) => {
   return res
     .status(201)
     .cookie("token", `Bearer ${token}`, {
-      maxAge: 60 * 60 * 1000,
       httpOnly: true,
       secure: true,
     })

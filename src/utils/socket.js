@@ -2,7 +2,7 @@ import { Server } from "socket.io";
 const connectSocket = (server) => {
   const io = new Server(server, {
     cors: {
-      origin: "http://localhost:5173",
+      origin: "https://blogpost-frontend-coral.vercel.app",
       credentials: true,
     },
   });
