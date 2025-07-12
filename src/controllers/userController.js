@@ -33,6 +33,7 @@ export const registerUser = asyncHandler(async (req, res) => {
     .cookie("token", `Bearer ${token}`, {
       httpOnly: true,
       secure: true,
+      sameSite: "none",
     })
     .json(
       new ApiResponse(201, "user created succesfully", true, {
@@ -59,6 +60,7 @@ export const loginUser = asyncHandler(async (req, res) => {
     .cookie("token", `Bearer ${token}`, {
       httpOnly: true,
       secure: true,
+      sameSite: "none",
     })
     .json(
       new ApiResponse(201, "Login success", true, {
