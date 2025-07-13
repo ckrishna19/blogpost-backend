@@ -18,6 +18,10 @@ export const createPost = asyncHandler(async (req, res) => {
   if (!!image) {
     const access = ["image/jpeg", "image/png", "image/jpg", "image/gif"];
     if (!access.includes(image.mimetype)) {
+      fs.unlink(image.tempFilePath, (err) => {
+        if (err) throw new Error(err);
+        console.log("successfully deleted");
+      });
       throw new ApiError("Invalid image pattern", 403);
     }
 
@@ -49,6 +53,14 @@ export const updatePost = asyncHandler(async (req, res) => {
 
   const image = req?.files?.image;
 
+  const access = ["image/jpeg", "image/png", "image/jpg", "image/gif"];
+  if (!access.includes(image.mimetype)) {
+    fs.unlink(image?.tempFilePath, (err) => {
+      if (err) throw new ApiError(err);
+      console.log("image deleted successfully");
+    });
+    throw new ApiError("Invalid image pattern", 403);
+  }
   const post = await Post.findById(req.params.id);
   if (!post) {
     throw new ApiError("There is not such post", 403);

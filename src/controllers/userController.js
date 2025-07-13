@@ -135,6 +135,10 @@ export const updateProfileImage = asyncHandler(async (req, res) => {
   }
   const access = ["image/jpeg", "image/png", "image/jpg", "image/gif"];
   if (!access.includes(image.mimetype)) {
+    fs.unlink(image?.tempFilePath, (err) => {
+      if (err) throw new ApiError(err);
+      console.log("image deleted successfully");
+    });
     throw new ApiError("Invalid image pattern", 403);
   }
   if (user?.photoUrl?.publicId) {

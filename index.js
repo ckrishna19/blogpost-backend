@@ -16,7 +16,7 @@ import connectSocket from "./src/utils/socket.js";
 dotenv.config();
 const app = express();
 const server = http.createServer(app);
-connectSocket(server);
+//connectSocket(server);
 
 app.use(
   cors({
